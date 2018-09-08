@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "8d3736b0-a3c0-430e-89bb-4c96bb300ae7",
+		"name": "Pizzaria UDS ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:57095/api/pedidos/5/detalhes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:57095/api/pedidos/20/detalhes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57095",
+					"path": [
+						"api",
+						"pedidos",
+						"20",
+						"detalhes"
+					]
+				},
+				"description": "GET detalhes do pedido #5 (id=5)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:57095/api/pedidos/addextra",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "sem cebola",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "calabresa",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "-",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:57095/api/pedidos/addextra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57095",
+					"path": [
+						"api",
+						"pedidos",
+						"addextra"
+					]
+				},
+				"description": "Post de teste para incluir extras num pedido (pizza)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:57095/api/pedidos/listagem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:57095/api/pedidos/listagem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57095",
+					"path": [
+						"api",
+						"pedidos",
+						"listagem"
+					]
+				},
+				"description": "GET listagem com detalhes de todos os pedidos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:57095/api/pedidos/novo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "Gabriel Fleck",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "grande",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "marguerita",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:57095/api/pedidos/novo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57095",
+					"path": [
+						"api",
+						"pedidos",
+						"novo"
+					]
+				},
+				"description": "POST Adiciona novo pedido básico (sem extras)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:57095/api/pedidos/cancelapedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:57095/api/pedidos/cancelapedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57095",
+					"path": [
+						"api",
+						"pedidos",
+						"cancelapedido"
+					]
+				},
+				"description": "POST : cancela pedido indicado no body"
+			},
+			"response": []
+		}
+	]
+}
